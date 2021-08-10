@@ -1,0 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
+/*   Updated: 2021/08/10 00:37:29 by luizfern         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// testes inicias com ft_printf
+//
+//
+//
+
+char	*ft_strchr(const char *s, int c)
+{
+	char	*str;
+
+	str = (char *)s;
+	while (*str)
+	{
+		if (*str == (char)c)
+			return (str);
+		str++;
+	}
+	if (!*str && !c)
+		return (str);
+	return (0);
+}
+
+# include "libftprintf.h"
+int	_verifier_percent_c(int c)
+{
+	return (write(1, &c, 1));
+}
+
+int	_global_verifier(int format, va_list c)
+{
+	int contador;
+
+	if (format == 'c')
+		contador = _verifier_percent_c(va_arg(c, int));
+	else
+		contador = 0;
+	return (contador);
+}
+
+int	ft_printf(const char *string, ...)
+{
+	va_list args;
+	int char_print;
+	int count;
+
+	count = 0;
+	char_print = 0;
+	va_start(args, string);
+	while (string[count])
+	{
+		if (string[count] == '%' && 
+				ft_strchr("cspdiux%", string[count+1]))
+		{
+			char_print += _global_verifier(string[count+1], args);
+			count+=2;
+		}
+		else
+			char_print += write(1, &string[count++], 1);
+	}
+	va_end(args);
+	return (char_print);
+}
