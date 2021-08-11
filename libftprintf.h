@@ -6,8 +6,10 @@
 # include	<stddef.h>
 # include	<stdarg.h>
 
-int		ft_printf(const char *string, ...);
+char	*ft_strchr(const char *s, int c);
+char	*ft_itoa(int n);
 int		_s_verifier(char *string);
 int		_c_verifier(int c);
-int		_d_verifier(int d);
+int		_di_verifier(int d);
+int		ft_printf(const char *string, ...);
 #endif

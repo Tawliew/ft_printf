@@ -1,16 +1,22 @@
-NAME = libftprintf.a 
-CC = gcc
-CFLAGS =-c -Wall -Werror -Wextra  
-FORMAT =	format/_s_verifier.c \
-			format/_c_verifier.c \
-			format/_d_verifier.c \
+NAME	=	libftprintf.a 
+CC		=	gcc
+CFLAGS	=	-c -Wall -Werror -Wextra  
+
+LIBFT	=	libft/ft_strchr.c	\
+			libft/ft_itoa.c		
 
 
-SRCS =	ft_printf.c \
-		${FORMAT}
+FORMAT	=	format/_s_verifier.c	\
+			format/_c_verifier.c	\
+			format/_d_verifier.c	\
+
+
+SRCS 	=	ft_printf.c	\
+			${FORMAT}	\
+			${LIBFT}	\
 
 #.c to .o
-OBJ =		${SRCS:%.c=%.o}
+OBJ		=	${SRCS:%.c=%.o}
 
 all:		${NAME}
 
@@ -21,9 +27,9 @@ ${NAME}:	${OBJ}
 			${CC}	${CFLAGS}	$< -o $@
 
 test:
-	@echo "\n------------------------------------------------------------\n"
-	@${CC}	${CCFLAGS}	main.c ${NAME} && ./a.out 
-	@echo "\n------------------------------------------------------------\n"
+			@echo "\n------------------------------------------------------------\n"
+			@${CC}	${CCFLAGS}	main.c ${NAME} && ./a.out 
+			@echo "\n------------------------------------------------------------\n"
 clean:
 			rm -f	${OBJ}
 
