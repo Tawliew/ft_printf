@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/10 23:35:08 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/11 00:07:01 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,7 @@ int	_verifier_percent_s(char *string)
 }
 int	_verifier_percent_c(int c)
 {
-	int counter;
-	
-	counter = write(1, &c, 1);
-
-	printf("\n\n counter inside verifier %d", counter);
-	return (counter);
+	return (write(1, &c, 1));
 }
 
 int	_global_verifier(int format, va_list c)
@@ -59,7 +54,6 @@ int	_global_verifier(int format, va_list c)
 		contador =  _verifier_percent_s(va_arg(c, char *));
 	else
 		contador = 0;
-	printf("\n\n contador: %d\n\n", contador);
 	return (contador);
 }
 
