@@ -1,8 +1,13 @@
 NAME = libftprintf.a 
 CC = gcc
 CFLAGS =-c -Wall -Werror -Wextra  
-RM = rm -f
-SRCS =	ft_printf.c 
+FORMAT =	format/_s_verifier.c \
+			format/_c_verifier.c \
+			format/_d_verifier.c \
+
+
+SRCS =	ft_printf.c \
+		${FORMAT}
 
 #.c to .o
 OBJ =		${SRCS:%.c=%.o}
@@ -17,13 +22,13 @@ ${NAME}:	${OBJ}
 
 test:
 	@echo "\n------------------------------------------------------------\n"
-	@${CC}	${CCFLAGS}	main.c ${NAME} && ./a.out ronaldinho 
+	@${CC}	${CCFLAGS}	main.c ${NAME} && ./a.out 
 	@echo "\n------------------------------------------------------------\n"
 clean:
-			${RM}	${OBJ}
+			rm -f	${OBJ}
 
 fclean:		clean
-			${RM}	${NAME}
+			rm -f	${NAME}
 
 re: fclean all test 
 
