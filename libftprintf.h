@@ -11,5 +11,6 @@ char	*ft_itoa(int n);
 int		_s_verifier(char *string);
 int		_c_verifier(int c);
 int		_di_verifier(int d);
+int		_u_verifier(size_t u);
 int		ft_printf(const char *string, ...);
 #endif

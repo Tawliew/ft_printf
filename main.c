@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:10:45 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/11 18:37:48 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/12 21:03:33 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,30 @@ int main ()
 	printf("Retorno da ft_printf: %d", return_printf);
 	printf("\n\n");
 	return_printf = printf("printando numero muiiiito grande 5000000000000: %i", 5000000000000);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 24);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 24);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS 2 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 0);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 0);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS 3 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", -1);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", -1);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 }
