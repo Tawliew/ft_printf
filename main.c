@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:10:45 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/12 21:03:33 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/12 21:16:37 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,11 @@ int main ()
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n ---------------FORMAT U TESTS --------------------- \n\n");
-	return_printf = ft_printf("O numero e %u", 24);
+	return_printf = ft_printf("O numero e %u", 42);
 	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
 	printf("\n\n");
-	return_printf = printf("O numero e %u", 24);
+	return_printf = printf("O numero e %u", 42);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n ---------------FORMAT U TESTS 2 --------------------- \n\n");
@@ -114,4 +114,36 @@ int main ()
 	return_printf = printf("O numero e %u", -1);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
-}
+	printf("\n\n ---------------FORMAT U TESTS 4 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 10);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 10);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS 5 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 8);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 8);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS 6 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 42949672951);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 42949672951);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT U TESTS 7 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %u", 5000000000000000000000);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %u", 5000000000000000000000);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	}

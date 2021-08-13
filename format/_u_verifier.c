@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 18:40:50 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/12 20:48:01 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/12 21:09:50 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_utoa(size_t n)
 	return (ptr_n);
 }
 
-int	_u_verifier(size_t u)
+int	_u_verifier(unsigned int u)
 {
 	char	*string;
 	int		counter;
