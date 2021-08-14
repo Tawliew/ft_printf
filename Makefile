@@ -3,7 +3,8 @@ CC		=	gcc
 CFLAGS	=	-c -Wall -Werror -Wextra  
 
 LIBFT	=	libft/ft_strchr.c	\
-			libft/ft_itoa.c		
+			libft/ft_itoa.c		\
+			libft/ft_utoa.c		\
 
 
 FORMAT	=	format/_s_verifier.c	\

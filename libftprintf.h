@@ -8,6 +8,7 @@
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_itoa(int n);
+char	*ft_utoa(unsigned int u);
 int		_s_verifier(char *string);
 int		_c_verifier(int c);
 int		_di_verifier(int d);
