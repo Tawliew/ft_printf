@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 00:19:31 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:19:47 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:13:29 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,22 @@
 
 int      ft_size_ptr(size_t n)
 {
-        int             len;
-        long    nb;
+	int		len;
+	long long    nb;
 
-        nb = n;
-        len = 1;
-        while (nb >= 10)
-        {
-                len++;
-                nb /= 10;
-        }
-        return (len);
+	nb = n;
+	len = 0;
+	if (nb == 0)
+		len++;
+	if (nb < 0)
+	{
+		len++;
+		nb *= (-1);
+	}
+	while (nb != 0)
+	{
+		len++;
+		nb /= 10;
+	}
+	return (len);
 }

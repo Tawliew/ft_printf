@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:10:45 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:35:40 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:03:36 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,38 @@ int main ()
 	return_printf = printf("printando numero muiiiito grande 5000000000000: %i", 5000000000000);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT I TESTS 4 --------------------- \n\n");
+	return_printf = ft_printf("printando numero negativo MIN INT: %i", -2147483648);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("printando numero negativo MIN INT: %i", -2147483648);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT I TESTS 5 --------------------- \n\n");
+	return_printf = ft_printf("MIN NEGATIVO -1: %i", -2147483649);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("MIN NEGATIVO -1: %i", -2147483649);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT I TESTS 6 --------------------- \n\n");
+	return_printf = ft_printf("printando MAX INT : %i", 2147483647);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("printando MAX INT : %i", 2147483647);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n ---------------FORMAT I TESTS 7 --------------------- \n\n");
+	return_printf = ft_printf("printando MAX INT + 1 : %i", 2147483648);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("printando MAX INT + 1 : %i", 2147483648);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n ---------------FORMAT U TESTS --------------------- \n\n");
 	return_printf = ft_printf("O numero e %u", 42);
 	printf("\n\n");
@@ -154,7 +186,7 @@ int main ()
 	printf("\n\n");
 	return_printf = printf("O numero e %x", pointer);
 	printf("\n\n");
-	printf("Retorno da ft_printf: %d", return_printf);
+	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
 	printf("\n\n ---------------FORMAT X TEST 2 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 764);
@@ -163,7 +195,7 @@ int main ()
 	printf("\n\n");
 	return_printf = printf("O numero e %x", 764);
 	printf("\n\n");
-	printf("Retorno da ft_printf: %d", return_printf);
+	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
 	printf("\n\n ---------------FORMAT X TEST 3 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 10);
@@ -172,7 +204,7 @@ int main ()
 	printf("\n\n");
 	return_printf = printf("O numero e %x", 10);
 	printf("\n\n");
-	printf("Retorno da ft_printf: %d", return_printf);
+	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
 	printf("\n\n ---------------FORMAT X TEST 4 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 5051);
@@ -181,6 +213,33 @@ int main ()
 	printf("\n\n");
 	return_printf = printf("O numero e %x", 5051);
 	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT P TEST 1 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %p", 5051);
+	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %p", 5051);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT P TEST 2 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %p", pointer);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %p", pointer);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT P TEST 3 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %p", 764);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %p", 764);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
 }

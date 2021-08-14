@@ -17,5 +17,6 @@ int		_c_verifier(int c);
 int		_di_verifier(int d);
 int		_u_verifier(unsigned int u);
 int		_x_verifier(unsigned int x);
+int		_p_verifier(size_t p);
 int		ft_printf(const char *string, ...);
 #endif
