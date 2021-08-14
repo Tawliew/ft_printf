@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 17:01:08 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 18:26:32 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,14 @@ int	_global_verifier(int format, va_list c)
 		contador = _u_verifier(va_arg(c, unsigned int), &string);
 	else if (format == 'x')
 		contador = _x_verifier(va_arg(c, unsigned int), &string);
+	else if (format == 'X')
+		contador = _X_verifier(va_arg(c, unsigned int), &string);
 	else if (format == 'p')
 		contador = _p_verifier(va_arg(c, size_t), &string);
 	else
 		contador = 0;
+	if(ft_strchr("duixXp", format))
+		free(string);
 	return (contador);
 }
 
@@ -49,7 +53,7 @@ int	ft_printf(const char *string, ...)
 	while (string[count])
 	{
 		if (string[count] == '%' && 
-				ft_strchr("cspdiux%", string[count+1]))
+				ft_strchr("cspdiuxX%", string[count+1]))
 		{
 			char_print += _global_verifier(string[count+1], args);
 			count+=2;

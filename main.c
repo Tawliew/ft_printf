@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:10:45 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 16:03:36 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 18:24:14 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 # include <stdio.h>
 int main ()
 {
-	void * pointer;
+	char* pointer;
 	int return_printf;
 	char a = 'a';
 	char b[] = "teste s";
-	
+	pointer = (char*)calloc(sizeof(char), 2);
+	pointer[0] = 'a';
+
 	printf("\n\n ---------------FORMAT C TESTS #1------------------ \n\n");
 	return_printf = ft_printf("o caracter e: %c", a);
 	printf("\n\n");
@@ -179,7 +181,7 @@ int main ()
 	return_printf = printf("O numero e %u", 5000000000000000000000);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
-	printf("\n\n ---------------FORMAT X TEST 1 --------------------- \n\n");
+	printf("\n\n ---------------FORMAT x min TEST 1 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", pointer);
 	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
@@ -188,7 +190,7 @@ int main ()
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
-	printf("\n\n ---------------FORMAT X TEST 2 --------------------- \n\n");
+	printf("\n\n ---------------FORMAT x min TEST 2 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 764);
 	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
@@ -197,7 +199,7 @@ int main ()
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
-	printf("\n\n ---------------FORMAT X TEST 3 --------------------- \n\n");
+	printf("\n\n ---------------FORMAT x min TEST 3 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 10);
 	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
@@ -206,12 +208,48 @@ int main ()
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
-	printf("\n\n ---------------FORMAT X TEST 4 --------------------- \n\n");
+	printf("\n\n ---------------FORMAT x min TEST 4 --------------------- \n\n");
 	return_printf = ft_printf("O numero e %x", 5051);
 	printf("\n\n");
 	printf("Retorno da ft_printf: %d", return_printf);
 	printf("\n\n");
 	return_printf = printf("O numero e %x", 5051);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X min TEST 1 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %X", pointer);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %X", pointer);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X min TEST 2 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %X", 764);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %X", 764);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X min TEST 3 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %X", 10);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %X", 10);
+	printf("\n\n");
+	printf("Retorno da printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X min TEST 4 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %X", 5051);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %X", 5051);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
@@ -242,4 +280,5 @@ int main ()
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
 	printf("\n\n");
+	free(pointer);
 }

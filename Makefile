@@ -7,6 +7,7 @@ LIBFT	=	libft/ft_strchr.c	\
 			libft/ft_utoa.c		\
 			libft/ft_utoh.c		\
 			libft/ft_calloc.c	\
+			libft/ft_toupper.c	\
 			libft/ft_size_ptr.c	\
 			
 
@@ -15,6 +16,7 @@ FORMAT	=	format/_s_verifier.c	\
 			format/_d_verifier.c	\
 			format/_u_verifier.c	\
 			format/_x_verifier.c	\
+			format/_X_verifier.c	\
 			format/_p_verifier.c	\
 
 SRCS 	=	ft_printf.c	\
@@ -34,7 +36,11 @@ ${NAME}:	${OBJ}
 
 test:
 			@echo "\n------------------------------------------------------------\n"
-			@${CC}	${CCFLAGS}	main.c ${NAME} && ./a.out 
+			@${CC}	${CCFLAGS}	main.c ${NAME} && valgrind ./a.out --leak-check=full 
+			@echo "\n------------------------------------------------------------\n"
+test2:
+			@echo "\n------------------------------------------------------------\n"
+			@${CC}	${CCFLAGS}	main2.c ${NAME} && valgrind ./a.out --leak-check=full 
 			@echo "\n------------------------------------------------------------\n"
 clean:
 			rm -f	${OBJ}
