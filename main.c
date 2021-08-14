@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:10:45 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/12 21:16:37 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 00:35:40 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # include <stdio.h>
 int main ()
 {
+	void * pointer;
 	int return_printf;
 	char a = 'a';
 	char b[] = "teste s";
@@ -146,4 +147,40 @@ int main ()
 	return_printf = printf("O numero e %u", 5000000000000000000000);
 	printf("\n\n");
 	printf("Retorno da printf: %d", return_printf);
-	}
+	printf("\n\n ---------------FORMAT X TEST 1 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %x", pointer);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %x", pointer);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X TEST 2 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %x", 764);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %x", 764);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X TEST 3 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %x", 10);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %x", 10);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	printf("\n\n ---------------FORMAT X TEST 4 --------------------- \n\n");
+	return_printf = ft_printf("O numero e %x", 5051);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+	return_printf = printf("O numero e %x", 5051);
+	printf("\n\n");
+	printf("Retorno da ft_printf: %d", return_printf);
+	printf("\n\n");
+}

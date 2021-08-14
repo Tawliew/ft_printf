@@ -5,12 +5,16 @@ CFLAGS	=	-c -Wall -Werror -Wextra
 LIBFT	=	libft/ft_strchr.c	\
 			libft/ft_itoa.c		\
 			libft/ft_utoa.c		\
-
+			libft/ft_utoh.c		\
+			libft/ft_calloc.c	\
+			libft/ft_size_ptr.c	\
+			
 
 FORMAT	=	format/_s_verifier.c	\
 			format/_c_verifier.c	\
 			format/_d_verifier.c	\
 			format/_u_verifier.c	\
+			format/_x_verifier.c	\
 
 
 SRCS 	=	ft_printf.c	\

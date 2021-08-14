@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/13 21:39:14 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:24:30 by luizfern         ###   ########.fr       */
+/*   Created: 2021/08/14 00:05:21 by luizfern          #+#    #+#             */
+/*   Updated: 2021/08/14 00:07:03 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../libftprintf.h"
 
-char	*ft_utoa(unsigned int n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char		*ptr_n;
-	size_t		nb;
-	size_t		i;
-	size_t		size_ptr;
+	void	*pointer;
+	size_t	i;
 
 	i = 0;
-	size_ptr = ft_size_ptr(n);
-	ptr_n = (char *)calloc(sizeof(char), size_ptr + 1);
-	if (!ptr_n)
+	pointer = (void *)malloc(nmemb * size);
+	if (!pointer)
 		return (NULL);
-	nb = n;
-	ptr_n[size_ptr - i++] = '\0';
-	while (nb >= 10)
-	{
-		ptr_n[size_ptr - i++] = (nb % 10) + '0';
-		nb /= 10;
-	}
-	ptr_n[size_ptr - i++] = (nb % 10) + '0';
-	return (ptr_n);
+	while (i < (nmemb * size))
+		((unsigned char *)pointer)[i++] = '\0';
+	return (pointer);
 }

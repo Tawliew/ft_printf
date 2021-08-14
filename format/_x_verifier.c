@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*   _x_verifier.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/13 21:39:14 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:24:30 by luizfern         ###   ########.fr       */
+/*   Created: 2021/08/14 00:11:39 by luizfern          #+#    #+#             */
+/*   Updated: 2021/08/14 00:35:19 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../libftprintf.h"
 
-char	*ft_utoa(unsigned int n)
+int	_x_verifier(unsigned int x)
 {
-	char		*ptr_n;
-	size_t		nb;
-	size_t		i;
-	size_t		size_ptr;
+	char	*string;
+	int		counter;
 
-	i = 0;
-	size_ptr = ft_size_ptr(n);
-	ptr_n = (char *)calloc(sizeof(char), size_ptr + 1);
-	if (!ptr_n)
-		return (NULL);
-	nb = n;
-	ptr_n[size_ptr - i++] = '\0';
-	while (nb >= 10)
-	{
-		ptr_n[size_ptr - i++] = (nb % 10) + '0';
-		nb /= 10;
-	}
-	ptr_n[size_ptr - i++] = (nb % 10) + '0';
-	return (ptr_n);
+	counter = 0;
+	string = ft_utoh(x);
+	while(string[counter])
+		write(1, &string[counter++], 1);
+	return (counter);
 }
