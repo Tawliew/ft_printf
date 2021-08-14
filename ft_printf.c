@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 15:15:07 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 17:01:08 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,20 @@
 int	_global_verifier(int format, va_list c)
 {
 	int contador;
+	char *string;
 
 	if (format == 'c')
 		contador = _c_verifier(va_arg(c, int));
 	else if (format == 's')
 		contador = _s_verifier(va_arg(c, char *));
 	else if (format == 'd' || format == 'i')
-		contador = _di_verifier(va_arg(c, int));
+		contador = _di_verifier(va_arg(c, int), &string);
 	else if (format == 'u')
-		contador = _u_verifier(va_arg(c, unsigned int));
+		contador = _u_verifier(va_arg(c, unsigned int), &string);
 	else if (format == 'x')
-		contador = _x_verifier(va_arg(c, unsigned int));
+		contador = _x_verifier(va_arg(c, unsigned int), &string);
 	else if (format == 'p')
-		contador = _p_verifier(va_arg(c, size_t));
+		contador = _p_verifier(va_arg(c, size_t), &string);
 	else
 		contador = 0;
 	return (contador);

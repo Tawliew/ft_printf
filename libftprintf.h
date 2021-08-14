@@ -11,12 +11,12 @@ char	*ft_strchr(const char *s, int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int u);
-char    *ft_utoh(unsigned int x);
+char    *ft_utoh(size_t x);
 int		_s_verifier(char *string);
 int		_c_verifier(int c);
-int		_di_verifier(int d);
-int		_u_verifier(unsigned int u);
-int		_x_verifier(unsigned int x);
-int		_p_verifier(size_t p);
+int		_di_verifier(int d, char **string);
+int		_u_verifier(unsigned int u, char **string);
+int		_x_verifier(unsigned int x, char **string);
+int		_p_verifier(size_t p, char **string);
 int		ft_printf(const char *string, ...);
 #endif

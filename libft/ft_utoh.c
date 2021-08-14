@@ -6,37 +6,33 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 21:58:11 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 16:20:56 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:40:33 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../libftprintf.h"
 
-char    *ft_utoh(unsigned int x)
+char    *ft_utoh(size_t x)
 {
 	char	*ptr_n;
 	size_t	nb;
 	size_t	tmp;
-	size_t	i;
 	size_t	size_pointer;
 
-	i = 0;
 	size_pointer = ft_size_ptr(x, 16);
 	ptr_n = (char *)ft_calloc(sizeof(char), size_pointer + 1);
 	if (!ptr_n)
 		return (NULL);
 	nb = x;
-	ptr_n[size_pointer - i++] = '\0';
+	size_pointer--;
 	while (nb != 0)
 	{
 		tmp = nb % 16;
 		if (tmp >= 10)
-			ptr_n[size_pointer - i++] = (tmp - 10 + 'a');
+			ptr_n[size_pointer--] = (tmp - 10 + 'a');
 		else
-			ptr_n[size_pointer - i++] = (tmp + '0');
+			ptr_n[size_pointer--] = (tmp + '0');
 		nb /= 16;
 	}
-//	while (!*ptr_n)
-//		ptr_n++;
 	return (ptr_n);
 }

@@ -6,20 +6,20 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:39:18 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/11 18:38:25 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 17:11:48 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../libftprintf.h"
 
-int _di_verifier(int d)
+int _di_verifier(int d, char **string)
 {
 	int counter;
-	char *string;
-
+	char *str;
 	counter = 0;
-	string = ft_itoa(d);
-	while (string[counter])
-		write(1, &string[counter++], 1);
+	*string = ft_itoa(d);
+	str = *string;
+	while (str[counter])
+		write(1, &str[counter++], 1);
 	return (counter);
 }
