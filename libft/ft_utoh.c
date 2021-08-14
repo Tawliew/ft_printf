@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utohex.c                                        :+:      :+:    :+:   */
+/*   ft_utoh.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 21:58:11 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:15:03 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:20:56 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char    *ft_utoh(unsigned int x)
 	size_t	size_pointer;
 
 	i = 0;
-	size_pointer = ft_size_ptr(x);
+	size_pointer = ft_size_ptr(x, 16);
 	ptr_n = (char *)ft_calloc(sizeof(char), size_pointer + 1);
 	if (!ptr_n)
 		return (NULL);
@@ -36,7 +36,7 @@ char    *ft_utoh(unsigned int x)
 			ptr_n[size_pointer - i++] = (tmp + '0');
 		nb /= 16;
 	}
-	while (!*ptr_n)
-		ptr_n++;
+//	while (!*ptr_n)
+//		ptr_n++;
 	return (ptr_n);
 }

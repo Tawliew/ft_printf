@@ -6,7 +6,7 @@
 # include	<stddef.h>
 # include	<stdarg.h>
 
-int		ft_size_ptr(size_t n);
+int		ft_size_ptr(size_t n, int base);
 char	*ft_strchr(const char *s, int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);

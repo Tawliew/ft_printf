@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 19:02:01 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 16:15:05 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:20:07 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int n)
 	int		i;
 	int		len;
 
-	len = ft_size_ptr(n);
+	len = ft_size_ptr(n, 10);
 	i = 0;
 	ptr_n = (char *)malloc(sizeof(char) * len + 1);
 	if (!ptr_n)

@@ -15,7 +15,7 @@ FORMAT	=	format/_s_verifier.c	\
 			format/_d_verifier.c	\
 			format/_u_verifier.c	\
 			format/_x_verifier.c	\
-
+			format/_p_verifier.c	\
 
 SRCS 	=	ft_printf.c	\
 			${FORMAT}	\

@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 21:39:14 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 00:24:30 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 16:20:39 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_utoa(unsigned int n)
 	size_t		size_ptr;
 
 	i = 0;
-	size_ptr = ft_size_ptr(n);
+	size_ptr = ft_size_ptr(n, 10);
 	ptr_n = (char *)calloc(sizeof(char), size_ptr + 1);
 	if (!ptr_n)
 		return (NULL);
