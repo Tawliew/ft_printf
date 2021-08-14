@@ -6,14 +6,14 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 18:26:32 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 18:42:36 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // testes inicias com ft_printf
 
-# include "libftprintf.h"
-# include <stdio.h>
+#include "libftprintf.h"
+#include <stdio.h>
 
 int	_global_verifier(int format, va_list c)
 {

@@ -13,7 +13,7 @@ LIBFT	=	libft/ft_strchr.c	\
 
 FORMAT	=	format/_s_verifier.c	\
 			format/_c_verifier.c	\
-			format/_d_verifier.c	\
+			format/_di_verifier.c	\
 			format/_u_verifier.c	\
 			format/_x_verifier.c	\
 			format/_X_verifier.c	\
@@ -33,22 +33,23 @@ ${NAME}:	${OBJ}
 
 %.o:		%.c
 			${CC}	${CFLAGS}	$< -o $@
-
-test:
-			@echo "\n------------------------------------------------------------\n"
-			@${CC}	${CCFLAGS}	main.c ${NAME} && valgrind ./a.out --leak-check=full 
-			@echo "\n------------------------------------------------------------\n"
-test2:
-			@echo "\n------------------------------------------------------------\n"
-			@${CC}	${CCFLAGS}	main2.c ${NAME} && valgrind ./a.out --leak-check=full 
-			@echo "\n------------------------------------------------------------\n"
+ 
+#test:
+#			@echo "\n------------------------------------------------------------\n"
+#			@${CC}	${CCFLAGS}	main.c ${NAME} && valgrind ./a.out --leak-check=full 
+#			@echo "\n------------------------------------------------------------\n"
+#test2:
+#			@echo "\n------------------------------------------------------------\n"
+#			@${CC}	${CCFLAGS}	main2.c ${NAME} && valgrind ./a.out --leak-check=full 
+#			@echo "\n------------------------------------------------------------\n"
+#
 clean:
 			rm -f	${OBJ}
 
 fclean:		clean
 			rm -f	${NAME}
 
-re: fclean all test 
+re: fclean all 
 
 
 .PHONY: all clean fclean re
