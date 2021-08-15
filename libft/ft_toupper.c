@@ -6,10 +6,11 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 18:14:12 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 18:21:11 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 01:50:30 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "../libftprintf.h"
+
+#include "../libftprintf.h"
 
 int	ft_toupper(int c)
 {

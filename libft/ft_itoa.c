@@ -6,16 +6,16 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 19:02:01 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/15 00:45:28 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 01:47:27 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftprintf.h"
 
-static int      static_itoa(long long int n, int base)
+static int	ssize_itoa(long long int n, int base)
 {
 	int				len;
-	long long int    nb;
+	long long int	nb;
 
 	nb = n;
 	len = 0;
@@ -41,10 +41,9 @@ char	*ft_itoa(int n)
 	int		i;
 	int		len;
 
-	len = static_itoa(n, 10);
+	len = ssize_itoa(n, 10);
 	i = 0;
 	ptr_n = (char *)malloc(sizeof(char) * len + 1);
-		
 	if (n < 0)
 		ptr_n[0] = '-';
 	nb = n;

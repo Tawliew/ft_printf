@@ -6,11 +6,11 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:56:24 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/11 18:16:42 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 01:52:21 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../libftprintf.h"
+#include "../libftprintf.h"
 
 char	*ft_strchr(const char *s, int c)
 {

@@ -12,7 +12,7 @@ char	*ft_strchr(const char *s, int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int u);
-char    *ft_utoh(size_t x);
+char	*ft_utoh(size_t x);
 int		_s_verifier(char *string);
 int		_c_verifier(int c);
 int		_di_verifier(int d, char **string);

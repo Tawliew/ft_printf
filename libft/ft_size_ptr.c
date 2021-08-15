@@ -6,13 +6,13 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 00:19:31 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/15 00:52:24 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 01:48:48 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../libftprintf.h"
+#include "../libftprintf.h"
 
-int      ft_size_ptr(size_t n, int base)
+int	ft_size_ptr(size_t n, int base)
 {
 	int			len;
 	size_t		nb;
