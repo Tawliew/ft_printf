@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: CI FT_PRINTF 42
 
 on:
   push:
