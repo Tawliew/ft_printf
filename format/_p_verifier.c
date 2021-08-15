@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 15:11:25 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 17:15:13 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 00:48:46 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	_p_verifier(size_t p, char **string)
 {
-	int		counter;
+	size_t counter;
 	char	*str;
 	counter = 0;
 	*string = ft_utoh(p);

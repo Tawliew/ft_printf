@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_verifier.c                                       :+:      :+:    :+:   */
+/*   _s_verifier.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:07:43 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/11 17:12:34 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 21:28:32 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 int		_s_verifier(char *string)
 {
 	int counter;
-
+	
 	counter = 0;
+	if(!string)
+		return(write(1, "(null)", 6));
 	while (string[counter])
 		write(1, &string[counter++], 1);
 	return (counter);

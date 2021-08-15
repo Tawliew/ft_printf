@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 21:58:11 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 19:45:13 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/15 00:46:42 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char    *ft_utoh(size_t x)
 {
 	char	*ptr_n;
-	size_t	nb;
-	size_t	tmp;
+	size_t nb;
+	size_t tmp;
 	size_t	size_pointer;
 
 	size_pointer = ft_size_ptr(x, 16);
