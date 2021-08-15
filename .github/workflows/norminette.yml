@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  norminette:
+
+    runs-on: ubuntu-latest
+    container:
+      image: tawliew/norminette:latest
+      options: -v $(pwd):/code
+    steps:
+      - uses: actions/checkout@v2
+      - name: test norminette
+        run: *
