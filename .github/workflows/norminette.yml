@@ -15,7 +15,5 @@ jobs:
       options: -v /__w/ft_printf:/code
     steps:
       - uses: actions/checkout@v2
-      - name: test norminette
-        run: |
-          pwd
-          ls -l
+      - name: Validate Norminette
+        run: norminette *
