@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: tawliew/norminette:latest
-      options: -v $(pwd):/code
+      options: -v /__w/ft_printf:/code
     steps:
       - uses: actions/checkout@v2
       - name: test norminette
