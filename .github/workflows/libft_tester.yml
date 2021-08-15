@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  LIBFT_TESTER:
 
     runs-on: ubuntu-latest
 
@@ -21,3 +21,4 @@ jobs:
         pwd
     - name: Test
       run: sh test m
+      working-directory: ./ft_printf_tester
