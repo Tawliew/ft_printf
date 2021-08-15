@@ -6,7 +6,7 @@
 /*   By: luizfern <lfluiz.lf@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:06:41 by luizfern          #+#    #+#             */
-/*   Updated: 2021/08/14 18:42:36 by luizfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 21:02:13 by luizfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	_global_verifier(int format, va_list c)
 
 	if (format == 'c')
 		contador = _c_verifier(va_arg(c, int));
+	else if (format == '%')
+		contador = write(1, "%", 1); 
 	else if (format == 's')
 		contador = _s_verifier(va_arg(c, char *));
 	else if (format == 'd' || format == 'i')

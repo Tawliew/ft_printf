@@ -1,6 +1,6 @@
 NAME	=	libftprintf.a 
 CC		=	gcc
-CFLAGS	=	-c -Wall -Werror -Wextra  
+CFLAGS	=	-Wall -Werror -Wextra  
 
 LIBFT	=	libft/ft_strchr.c	\
 			libft/ft_itoa.c		\
@@ -32,7 +32,7 @@ ${NAME}:	${OBJ}
 			ar rcs	${NAME}		${OBJ}
 
 %.o:		%.c
-			${CC}	${CFLAGS}	$< -o $@
+			${CC}	-c ${CFLAGS}	$< -o $@
  
 #test:
 #			@echo "\n------------------------------------------------------------\n"
@@ -42,7 +42,7 @@ ${NAME}:	${OBJ}
 #			@echo "\n------------------------------------------------------------\n"
 #			@${CC}	${CCFLAGS}	main2.c ${NAME} && valgrind ./a.out --leak-check=full 
 #			@echo "\n------------------------------------------------------------\n"
-#
+
 clean:
 			rm -f	${OBJ}
 
