@@ -1,0 +1,23 @@
+name: FT_PRINTF TESTER
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: gitclone tester
+      run: git clone https://github.com/paulo-santana/ft_printf_tester.git
+    - name: test ls
+      run: |
+        ls -l
+        pwd
+    - name: Test
+      run: sh test m
